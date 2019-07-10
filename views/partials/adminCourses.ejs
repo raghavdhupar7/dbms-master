@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row" style="margin-top:5vh;font-family: 'Cinzel-Black';">
+    <div class="col-12" style="text-align:center;color:white;">
+      <h1>Course List</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="listTable">
+      <tr>
+        <th>Course ID</th>
+        <th>Course Name</th>
+        <th>Course Session</th>
+        <th>Course L_T_P</th>
+        <th>Course Credits</th>
+        <th>Admin Options</th>
+      </tr>
+      <tbody>
+        <% data.courses.forEach((item)=>{ %>
+          <tr>
+            <td><%= item.COURSE_CODE %></td>
+            <td><%= item.COURSE_NAME %></td>
+            <td><%= item.SESION %></td>
+            <td><%= item.L_T_P %></td>
+            <td><%= item.CREDIT %></td>
+            <td> <a href="#"><button type="button" name="button">Update</button></a> <a href="/delete?table=course&id=<%= item.COURSE_CODE %>"><button type="button" name="button">Delete</button></a> </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>

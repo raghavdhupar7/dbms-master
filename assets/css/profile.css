@@ -1,0 +1,225 @@
+@import "fonts.css";
+
+html,section,div,p,ul,li,ol,body,h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+body{
+  box-sizing: content-box;
+  overflow-x: hidden;
+  /* background-image: linear-gradient(#25283D 50%, #FF0055 50%); */
+}
+.card{
+  position: relative;
+  min-width: 350px;
+  width: 30%;
+  height: 70%;
+  z-index: 3;
+  box-shadow: 0 0 20px #1c1c1c;
+  text-align: center;
+  border-radius: 6px;
+  margin: 5% auto;
+  background: white;
+  overflow: hidden;
+}
+.img-box{
+  position: relative;
+  width: 100%;
+  min-width: 350px;
+  height: auto;
+}
+.img-box img{
+  width: 100%;
+  height: auto;
+}
+.img-box .overlay{
+  position: absolute;
+  top : 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 33;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.details{
+    color: white;
+    min-width: 350px;
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    padding: auto;
+    z-index: 34;
+}
+/*#########################################################################################*/
+.background{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index : -1;
+}
+.top{
+  top: 0;
+  background-color: #1C1C1C;
+  height: 40%;
+}
+.bottom{
+  top: 40%;
+  background-color: #FF3300;
+  height: 60%;
+}
+/*#########################################################################################*/
+.location-set{
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center;
+  background-color: #FF2200;
+  background-image: linear-gradient(#FF6600, #FF0088);
+  box-shadow: 0 10px 20px #1c1c1c;
+}
+.location-set .fa-pencil{
+  color : white;
+  font-size: 25px;
+  margin: auto;
+  margin-top: 30%;
+}
+/*#########################################################################################*/
+.img-box:hover .overlay{
+  background-color: rgba(0, 0, 0, 0);
+}
+.container-card{
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+  padding : 0 20px;
+}
+.container-card p{
+  margin: 0;
+}
+.reviews{
+  box-shadow: 0 0 5px #cccccc;
+  box-sizing: content-box;
+  max-width: 55px;
+  margin: 0;
+}
+.up{
+  position: relative;
+  top : -147px;
+}
+/*=============================== Login ==================================================*/
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #FF3300;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/*========================================================================================*/
+
+@media (max-width:350px) {
+  .background{
+    display: none;
+  }
+  .card{
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+  }
+}
+
+/*#########################################################################################*/
+.navBar{
+  position: fixed;
+  top : 0;
+  left: -300px;;
+  min-height: 100vh;
+  min-width: 300px;
+  background-color: #1C1C1C;
+  z-index: 15;
+  box-shadow: 0 5px 10px #777777;
+}
+.show{
+  position: absolute;
+  background: red;
+  right : -65px;
+  top : 45vh;
+  width: 100px;
+  height: 30px;
+  transform: rotate(90deg);
+  border-radius:5px 5px 0 0 ;
+  text-align: center;
+  padding: auto;
+  color : white;
+}
+.navBar:hover{
+  animation: show 0.5s;
+  -webkit-animation : show 0.5s;
+  left : 0;
+  text-align: center;
+}
+.navBar:hover .show{
+  opacity: 0;
+}
+@keyframes show {
+  0% {
+      left : -300px;
+  }
+  100% {
+      left : 0;
+  }
+}
+/*#########################################################################################*/
+.navList{
+  width: 300px;
+  font-size: 25px;
+
+}
+.navList a{
+  width: 300px;
+
+}

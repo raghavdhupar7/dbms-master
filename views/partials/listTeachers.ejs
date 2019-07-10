@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row" style="margin-top:5vh;font-family: 'Cinzel-Black';">
+    <div class="col-12" style="text-align:center;color:white;">
+      <h1>Teachers List</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="listTable">
+      <tr>
+        <th>Teacher ID</th>
+        <th>Teacher Name</th>
+        <th>Courses Name</th>
+      </tr>
+      <tbody>
+        <% teacher.forEach((item)=>{ %>
+          <tr>
+            <td><%= item.TID %></td>
+            <td><%= item.FIRST_NAME %> <%= item.LAST_NAME %></td>
+            <td>
+              <% item.courses.forEach((couItem)=>{ %>
+                <a href="/profile/feedbacks?tid=<%= item.TID %>&cid=<%= couItem.COURSE_CODE %>"> <button type="button" name="button"><%= couItem.COURSE_NAME %></button> </a>
+              <% }); %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>

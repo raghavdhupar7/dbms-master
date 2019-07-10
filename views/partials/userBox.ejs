@@ -1,0 +1,70 @@
+<div class="card">
+  <div class="img-box">
+    <img src="../assets/images/pro2.jpg"/>
+    <div class="overlay"></div>
+      <div class="details">
+        <h3 onClick={this.props.setUsername}><%= user.FIRST_NAME + " " + user.LAST_NAME %></h3>
+        <% if('SID' in user){ %>
+          <p>@<%= user.SID %></p>
+        <% } else { %>
+          <p>@<%= user.TID %></p>
+        <% } %>
+        <a href="/profile/update">
+          <div class="location-set">
+            <i class="fa fa-pencil"></i>
+          </div>
+        </a>
+      </div>
+  </div>
+  <div class="container-card">
+    <div class="row">
+        <div class="col-6">
+          <p><%= user.JOINING_YEAR %></p>
+          <p><b>Joining Year</b></p>
+        </div>
+        <div class="col-6">
+          <p><%= user.CONTACT_NO %></p>
+          <p><b>Contact</b></p>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+      <% if('SID' in user){ %>
+        <div class="col-4">
+          <p><%= user.BRANCH %></p>
+          <p><b>Branch</b></p>
+        </div>
+        <div class="col-4">
+          <p><%= user.DEGREE %></p>
+          <p><b>Degree</b></p>
+        </div>
+      <% } else { %>
+        <div class="col-4">
+          <p><%= user.DEPT %></p>
+          <p><b>Department</b></p>
+        </div>
+        <div class="col-4">
+          <p><%= user.DESIGNATION %></p>
+          <p><b>Designation</b></p>
+        </div>
+      <% } %>
+      <div class="col-4">
+        <p><%= user.DOB %></p>
+        <p><b>DOB</b></p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <% if('SID' in user){ %>
+        <div class="col-12">
+          <a href="/profile/list"><button type="button" name="button">Feedbacks</button></a>
+        </div>
+      <% } else { %>
+        <div class="col-12">
+          <a href="/profile/feedbacks?tid=<%= user.TID %>"><button type="button" name="button">Veiw My Feedbacks</button></a>
+        </div>
+      <% } %>
+
+    </div>
+  </div>
+</div>

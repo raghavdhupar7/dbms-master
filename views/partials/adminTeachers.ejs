@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row" style="margin-top:5vh;font-family: 'Cinzel-Black';">
+    <div class="col-12" style="text-align:center;color:white;">
+      <h1>Teacher List</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="listTable">
+      <tr>
+        <th>Teacher ID</th>
+        <th>Teacher Name</th>
+        <th>Teacher Department</th>
+        <th>Teacher Designation</th>
+        <th>Teacher Contact</th>
+        <th>Teacher E-Mail</th>
+        <th>Admin Options</th>
+      </tr>
+      <tbody>
+        <% data.teachers.forEach((item)=>{ %>
+          <tr>
+            <td><%= item.TID %></td>
+            <td><%= item.FIRST_NAME %> <%= item.LAST_NAME %></td>
+            <td><%= item.DEPT %></td>
+            <td><%= item.DESIGNATION %></td>
+            <td><%= item.CONTACT_NO %></td>
+            <td><%= item.EMAIL_ID %></td>
+            <td><a href="/delete?table=teacher&id=<%= item.TID %>"><button type="button" name="button">Delete</button></a> </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>

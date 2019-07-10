@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row" style="margin-top:5vh;font-family: 'Cinzel-Black';">
+    <div class="col-12" style="text-align:center;color:white;">
+      <h1>Feedback List</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="listTable">
+      <tr>
+        <th>Teacher ID</th>
+        <th>Course ID</th>
+        <th>Clarity Of Teaching</th>
+        <th>Clarity Of Language</th>
+        <th>Friendliness</th>
+        <th>Good Comments</th>
+        <th>Bad Comments</th>
+      </tr>
+      <tbody>
+        <% feedbacks.forEach((feedback)=>{ %>
+          <tr>
+            <td><%= feedback.TID %></td>
+            <td><%= feedback.CID %></td>
+            <td><%= feedback.RATING_A %></td>
+            <td><%= feedback.RATING_B %></td>
+            <td><%= feedback.RATING_C %></td>
+            <td><%= feedback.COMMENT_A %></td>
+            <td><%= feedback.COMMENT_B %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>

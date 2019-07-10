@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <link rel="stylesheet" href="../assets/bootstrapcss/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../assets/images/logo.jpg">
+  </head>
+  <body>
+    <%- include partials/authBackground.ejs %>
+    <%- include partials/userBox.ejs %>
+    <% if('TID' in user){ %>
+      <%- include partials/navBar.ejs %>
+    <% } %>
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+  </body>
+</html>

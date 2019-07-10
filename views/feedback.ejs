@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/bootstrapcss/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../assets/images/logo.jpg">
+  </head>
+  <body>
+    <%- include partials/authBackground.ejs %>
+    <div class="authCard">
+      <img class="logo" src="../assets/images/logo.jpg" alt="" width="50%" height="auto">
+      <h2 class="card-heading">Submit Feedback</h2>
+      <hr>
+      <form action="/profile/feedback" method="post">
+        <div class="container">
+          <label for="id"><b>Your ID</b></label>
+          <input type="text" value="<%= user.SID %>" name="sid" readonly>
+
+          <label for="password"><b>Teacher ID</b></label>
+          <input type="text" value="<%= teacherid %>" name="tid" readonly>
+
+          <label for="password"><b>Course ID</b></label>
+          <input type="text" value="<%= courseid %>" name="cid" readonly>
+
+          <label for="ra"><b>Clarity Of Teaching</b></label>
+          <input type="number" placeholder="Clarity Of Teaching" name="ra" required>
+
+          <label for="rb"><b>Language</b></label>
+          <input type="number" placeholder="Any language problems?" name="rb" required>
+
+          <label for="rc"><b>Friendliness</b></label>
+          <input type="number" placeholder="Is the teacher too rude?" name="rc" required>
+
+          <label for="ca"><b>Any Good Comments?</b></label>
+          <input type="text" placeholder="Good Comments" name="ca" required>
+
+          <label for="cb"><b>Any Bad Comments?</b></label>
+          <input type="text" placeholder="Bad Comments" name="cb" required>
+
+          <button type="submit" class="submitBut">Submit Feedbacks</button>
+        </div>
+      </form>
+    </div>
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+  </body>
+</html>

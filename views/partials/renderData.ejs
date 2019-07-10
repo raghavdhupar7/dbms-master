@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row" style="margin-top:5vh;font-family: 'Cinzel-Black';">
+    <div class="col-12" style="text-align:center;color:white;">
+      <h1>Overall Statistics</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="listTable">
+      <tr>
+        <th>Property</th>
+        <th>Clarity Of Teaching</th>
+        <th>Clarity Of Language</th>
+        <th>Friendliness</th>
+      </tr>
+      <tbody>
+          <tr>
+            <td>Average</td>
+            <td><%= renderData.avg.RA %></td>
+            <td><%= renderData.avg.RB %></td>
+            <td><%= renderData.avg.RC %></td>
+          </tr>
+          <tr>
+            <td>Max Values</td>
+            <td><%= renderData.max.RA %></td>
+            <td><%= renderData.max.RB %></td>
+            <td><%= renderData.max.RC %></td>
+          </tr>
+          <tr>
+            <td>Min Values</td>
+            <td><%= renderData.min.RA %></td>
+            <td><%= renderData.min.RB %></td>
+            <td><%= renderData.min.RC %></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

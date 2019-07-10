@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row" style="margin-top:5vh;font-family: 'Cinzel-Black';">
+    <div class="col-12" style="text-align:center;color:white;">
+      <h1>Feedback List</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="listTable">
+      <tr>
+        <th>Teacher ID</th>
+        <th>Course ID</th>
+        <th>Clarity Of Teaching</th>
+        <th>Clarity Of Language</th>
+        <th>Friendliness</th>
+        <th>Good Comments</th>
+        <th>Bad Comments</th>
+      </tr>
+      <tbody>
+        <% feedbacks.forEach((feedback)=>{ %>
+          <tr>
+            <td><%= feedback.TID %></td>
+            <td><%= feedback.CID %></td>
+            <td><%= feedback.RATING_A %></td>
+            <td><%= feedback.RATING_B %></td>
+            <td><%= feedback.RATING_C %></td>
+            <td><%= feedback.COMMENT_A %></td>
+            <td><%= feedback.COMMENT_B %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+      <%  if('tid' in filter){ %>
+        <div class="col-3">
+          <a href="/profile/feedbacks?tid=<%= filter.tid %>"> <button type="button" name="button"><%= filter.tid %></button> </a>
+        </div>
+      <% } %>
+      <%  if('cid' in filter){ %>
+        <div class="col-3">
+          <a href="/profile/feedbacks?cid=<%= filter.cid %>"> <button type="button" name="button"><%= filter.cid %></button> </a>
+        </div>
+      <% } %>
+      <% if(('tid' in filter) && ('cid' in filter) && ('SID' in user)){ %>
+        <div class="col-5">
+          <a href="/profile/feedback?cid=<%= filter.cid %>&tid=<%= filter.tid %>"> <button type="button" name="button">Submit Feedback</button> </a>
+        </div>
+      <% } %>
+  </div>
+</div>

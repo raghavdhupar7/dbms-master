@@ -1,0 +1,29 @@
+<div class="navBar">
+  <div class="container" style="text-align:center;color:white;">
+    <div class="row">
+      <div class="col-12">
+        <h1>Courses</h1>
+      </div>
+    </div>
+  </div>
+  <hr style="display: block; height: 1px;
+border: 0; border-top: 1px solid #ffffff;
+margin: 1em 0; padding: 0;">
+  <div class="container" style="text-align:center;color:white;">
+    <% courses.forEach((course) => { %>
+      <a href="/profile/feedbacks?cid=<%= course.COURSE_CODE %>" style="text-decoration:none;color:white;">
+        <div class="row ">
+          <div class="col-12">
+            <%= course.COURSE_NAME %>
+          </div>
+        </div>
+      </a>
+      <hr style="display: block; height: 1px;
+    border: 0; border-top: 1px solid #ffffff;
+    margin: 1em 0; padding: 0;">
+    <% }) %>
+  </div>
+  <div class="show">
+    Courses
+  </div>
+</div>
